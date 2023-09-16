@@ -1,0 +1,40 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+:root{
+	--bg: #4091FF;
+	--text: #EEE;
+	--brad: .5rem;
+	--small: .75rem;
+	--medium: 1rem;
+	--big: 1.25rem;
+}
+
+html{
+	font-family: "Ubuntu", sans-serif;
+}
+
+button{
+	border: 0;
+}
+
+#choose_file{
+	border: 1px solid;
+}
+
+#file{
+	display: none;
+}
+
+#custom_file_upload{
+	background: var(--bg);
+	color: var(--text);
+	padding: 1rem;
+	border-radius: var(--brad);
+	display: block;
+	width: 12rem;
+	text-align: center
+}
