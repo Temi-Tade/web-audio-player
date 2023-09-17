@@ -18,14 +18,17 @@
 	
 	<section id="container">
 		<section id="choose_file">
-			<label for="file" id="custom_file_upload">Select a file</label>
-			<input type="file" id="file">
+			<label for="file" id="custom_file_upload" focusable="true">Select a file</label>
+			<input type="file" id="file" accept="audio/*">
 		</section>
 		
 		<section id="audio_element">
-			<audio src="" controls autoplay></audio>
+			<audio src="" controls></audio>
+			<div id="seek_meter">
+				<div></div>
+			</div>
 			<div id="controls">
-				<button class="fa-solid fa-play"></button>
+				<button id="audiobtn" class="fa-solid fa-play" disabled></button>
 			</div>
 		</section>
 	</section>
