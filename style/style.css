@@ -16,6 +16,7 @@
 html{
 	font-family: "Ubuntu", sans-serif;
 	user-select: none;
+	accent-color: var(--bg);
 }
 
 button{
@@ -58,6 +59,7 @@ button{
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-direction: column;
 }
 
 #controls #audiobtn{
@@ -72,4 +74,24 @@ button{
 
 #audiobtn:disabled{
 	color: #CCC;
+}
+
+#seek_wrap{
+	border: 1px solid;
+	padding: .5rem;
+	width: 100%;
+}
+
+#seek{
+	appearance: none;
+	display: block;
+	background: var(--bg);
+	accent-color: var(--text);
+	border-radius: .75rem;
+	height: .35rem;
+	width: 100%;
+}
+
+#seek:disabled{
+	background: #CCC;
 }
