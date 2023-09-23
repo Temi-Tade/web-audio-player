@@ -17,6 +17,7 @@ html{
 	font-family: "Ubuntu", sans-serif;
 	user-select: none;
 	accent-color: var(--bg);
+	background: var(--text);
 }
 
 button{
@@ -53,6 +54,10 @@ button{
 	margin: .5rem;
 }
 
+audio{
+	display: none;
+}
+
 #controls{
 	border: 1px solid;
 	padding: 1rem;
@@ -86,12 +91,19 @@ button{
 	appearance: none;
 	display: block;
 	background: var(--bg);
-	accent-color: var(--text);
-	border-radius: .75rem;
-	height: .35rem;
+	accent-color: #FFF;
+	height: .3rem;
 	width: 100%;
 }
 
 #seek:disabled{
 	background: #CCC;
+}
+
+#audio_duration{
+	border: 1px solid;
+	margin: .5rem 0;
+	padding: .75rem .125rem;
+	display: flex;
+	justify-content: space-between;
 }
