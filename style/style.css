@@ -2,7 +2,12 @@
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
-	transition: .5s;	
+	transition: .5s;
+	font-family: "Ubuntu", sans-serif;
+}
+
+*:focus{
+	outline: none;
 }
 
 :root{
@@ -44,10 +49,10 @@ button{
 	border: 0;
 	background: transparent;
 	color: var(--bg);
+	cursor: pointer;
 }
 
 #choose_file{
-	
 	justify-content: center;
 	display: flex;
 	padding: 1rem;
@@ -178,4 +183,13 @@ button#audiobtn{
 #value{
 	text-align: center;
 	font-size: var(--big);
+}
+
+#setdefault{
+	background: var(--bg);
+	color: var(--text);
+	padding: .75rem;
+	border-radius: .5rem;
+	margin: .5rem;
+	float: right;
 }

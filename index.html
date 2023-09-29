@@ -54,7 +54,7 @@
 					<p id="value"></p>
 					<input type="range" id="playbackspeed" step=".2" min=".2" max="2" value="1" oninput="setPlayBackValue(this, document.querySelector('#value'))">
 				</div>
-				<button id="setdefault" onclick="document.querySelector('#playbackspeed').value = 1; document.querySelector('#value').innerHTML = `${document.querySelector('#playbackspeed').value}×`">Set Default</button>
+				<button id="setdefault" onclick="document.querySelector('#playbackspeed').value = 1; document.querySelector('#value').innerHTML = `${document.querySelector('#playbackspeed').value}×`; AUDIO.playbackRate = document.querySelector('#playbackspeed').value">Set Default</button>
 			</div>
 		</section>
 	</section>

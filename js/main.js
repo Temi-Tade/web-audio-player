@@ -36,7 +36,7 @@ const SHOW_TOAST = (text) => {
 	TOAST.style.right = '1rem'
 	setTimeout(() => {
 		TOAST.style.right = '-20rem'
-	}, 1000)
+	}, 2000)
 }
 
 FILE_INPUT.onchange = () => {
