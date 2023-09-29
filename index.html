@@ -14,6 +14,9 @@
 <body>
 	<header>
 		<h1>BoomBox</h1>
+		<div id="toast-wrap">
+			<div id="toast-text">Text</div>
+		</div>
 	</header>
 	
 	<section id="container">
@@ -23,11 +26,12 @@
 		</section>
 		
 		<section id="audio_element">
-			<audio src="" controls></audio>
+			<audio src="" controls preload="metadata"></audio>
 			<div id="seek_meter">
 				<div></div>
 			</div>
 			<div id="controls">
+				<p id="file_name"></p>
 				<div id="seek_wrap">
 					<input type="range" id="seek" min="0" value="0" step="1" disabled>
 					<div id="audio_duration">
@@ -35,7 +39,22 @@
 						<span id="duration">0:00</span>
 					</div>
 				</div>
-				<button id="audiobtn" class="fa-solid fa-play" disabled></button>
+				<div id="user-controls">
+					<button id="loopbtn" class="fa-solid fa-repeat" disabled></button>
+					<button id="audiobtn" class="fa-solid fa-play" disabled></button>
+					<button id="optbtn" class="fa-solid fa-bars" disabled></button>
+				</div>
+			</div>
+		</section>
+		
+		<section id="bottom-panel-bg">
+			<div id="bottom-panel">
+				<div id="playback_speed_wrap">
+					<h3>Playback Speed</h3>
+					<p id="value"></p>
+					<input type="range" id="playbackspeed" step=".2" min=".2" max="2" value="1" oninput="setPlayBackValue(this, document.querySelector('#value'))">
+				</div>
+				<button id="setdefault" onclick="document.querySelector('#playbackspeed').value = 1; document.querySelector('#value').innerHTML = `${document.querySelector('#playbackspeed').value}×`">Set Default</button>
 			</div>
 		</section>
 	</section>
