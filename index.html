@@ -20,6 +20,12 @@
 	</header>
 	
 	<section id="container">
+		<section id="media-type">
+			<ul type="none">
+				<li><button id="audio">audio</button></li>
+				<li><button id="video">video</button></li>
+			</ul>
+		</section>
 		<section id="choose_file">
 			<label for="file" id="custom_file_upload" focusable="true">Select a file</label>
 			<input type="file" id="file" accept="audio/*">
@@ -27,9 +33,6 @@
 		
 		<section id="audio_element">
 			<audio src="" controls preload="metadata"></audio>
-			<div id="seek_meter">
-				<div></div>
-			</div>
 			<div id="controls">
 				<p id="file_name"></p>
 				<div id="seek_wrap">
@@ -47,6 +50,8 @@
 			</div>
 		</section>
 		
+		
+		
 		<section id="bottom-panel-bg">
 			<div id="bottom-panel">
 				<div id="playback_speed_wrap">
@@ -58,7 +63,8 @@
 			</div>
 		</section>
 	</section>
-	<script src="./js/main.js"></script>
+	<script src="./js/audio.js"></script>
+	<script src="./js/video.js"></script>
 </body>
 
 </html>
