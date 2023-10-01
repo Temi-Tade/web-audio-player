@@ -1,15 +1,3 @@
-const FILE_INPUT = document.querySelector("#file")
-const AUDIO = document.querySelector("audio")
-const PLAY_BUTTON = document.querySelector("#audiobtn")
-const LOOP_BUTTON = document.querySelector("#loopbtn")
-const OPT_BUTTON = document.querySelector("#optbtn")
-const AUDIO_LIST = []
-const SEEK = document.querySelector('#seek')
-const CURRENT_TIME = document.querySelector("#current")
-const TOTAL_TIME = document.querySelector("#duration")
-const FILE_NAME = document.querySelector("#file_name")
-const TOAST= document.querySelector("#toast-wrap")
-
 //set default playback speed
 document.querySelector("#value").innerHTML = `${document.querySelector("#playbackspeed").value}×`
 

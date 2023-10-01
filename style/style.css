@@ -101,6 +101,7 @@ button{
 	position: absolute;
 	bottom: 0;
 	width: 100%;
+	display: block;
 }
 
 audio{
@@ -215,4 +216,22 @@ button#audiobtn{
 	border-radius: .5rem;
 	margin: .5rem;
 	float: right;
+}
+
+.active{
+	background: var(--text);
+	color: var(--bg);
+	border: 1px dashed;
+}
+
+.inactive{
+	background: var(--bg);
+	color: var(--text);
+	border: 0;
+}
+
+#video_element{
+	border: 1px solid;
+	padding: 1rem;
+	display: none
 }
