@@ -1,4 +1,15 @@
-//set default playback speed
+const FILE_INPUT = document.querySelector("#file")
+const AUDIO = document.querySelector("audio")
+const PLAY_BUTTON = document.querySelector("#audiobtn")
+const LOOP_BUTTON = document.querySelector("#loopbtn")
+const OPT_BUTTON = document.querySelector("#optbtn")
+const SEEK = document.querySelector('#seek')
+const CURRENT_TIME = document.querySelector("#current")
+const TOTAL_TIME = document.querySelector("#duration")
+const FILE_NAME = document.querySelector("#file_name")
+const TOAST= document.querySelector("#toast-wrap")
+const AUDIO_EL = document.querySelector("#audio_element")
+
 document.querySelector("#value").innerHTML = `${document.querySelector("#playbackspeed").value}×`
 
 const GET_FILE_NAME = (file) => {
@@ -30,7 +41,7 @@ const SHOW_TOAST = (text) => {
 FILE_INPUT.onchange = () => {
 	FILE_NAME.innerHTML = `
 		<marquee>${GET_FILE_NAME(FILE_INPUT.files[0].name)}</marquee>
-	`
+		`
 	if (FILE_INPUT.length === 0) {
 		return
 	} else {
@@ -86,7 +97,7 @@ const setPlayBackValue = (x, y) => {
 LOOP_BUTTON.onclick = () => {
 	switch (AUDIO.loop) {
 		case true:
-			LOOP_BUTTON.style.color = '#333'
+			LOOP_BUTTON.style.color = '#FEF'
 			AUDIO.loop = false
 			SHOW_TOAST('Repeat: Off')
 			break;

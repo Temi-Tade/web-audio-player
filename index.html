@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=false">
 	<title>BoomBox</title>
 	<link rel="stylesheet" href="./style/style.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
@@ -20,15 +20,13 @@
 	</header>
 	
 	<section id="container">
-		<section id="media-type">
-			<ul type="none">
-				<li><button id="audio" class="active" onclick="setAudioMode(AUDIO_EL, VIDEO_EL, this, document.querySelector('#video'))">audio</button></li>
-				<li><button id="video" class="inactive" onclick="setVideoMode(VIDEO_EL, AUDIO_EL, this, document.querySelector('#audio'))">video</button></li>
-			</ul>
-		</section>
 		<section id="choose_file">
 			<label for="file" id="custom_file_upload" focusable="true">Select a file</label>
 			<input type="file" id="file" accept="audio/*">
+		</section>
+		
+		<section id="icon">
+			<div class="fa-solid fa-music fa-beat-fade"></div>
 		</section>
 		
 		<section id="audio_element">
@@ -46,25 +44,6 @@
 					<button id="loopbtn" class="fa-solid fa-repeat" disabled></button>
 					<button id="audiobtn" class="fa-solid fa-play" disabled></button>
 					<button id="optbtn" class="fa-solid fa-bars" disabled></button>
-				</div>
-			</div>
-		</section>
-		
-		<section id="video_element">
-			<video src="" controls preload="metadata"></video>
-			<div id="vid_controls">
-				<p id="vid_file_name"></p>
-				<div id="vid_seek_wrap">
-					<input type="range" id="vid_seek" min="0" value="0" step="1" disabled>
-					<div id="video_duration">
-						<span id="vid_current">0:00</span>
-						<span id="vid_duration">0:00</span>
-					</div>
-				</div>
-				<div id="vid_user-controls">
-					<button id="vid_loopbtn" class="fa-solid fa-repeat" disabled></button>
-					<button id="videobtn" class="fa-solid fa-play" disabled></button>
-					<button id="vid_optbtn" class="fa-solid fa-bars" disabled></button>
 				</div>
 			</div>
 		</section>

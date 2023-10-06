@@ -13,6 +13,7 @@
 :root{
 	--bg: #4091FF;
 	--text: #EEE;
+	--theme: #333;
 	--brad: .5rem;
 	--small: .75rem;
 	--medium: 1rem;
@@ -22,8 +23,9 @@
 html{
 	font-family: "Ubuntu", sans-serif;
 	user-select: none;
-	accent-color: var(--bg);
-	background: var(--text);
+	accent-color: #FEF;
+	background: var(--theme);
+	color: var(--text);
 }
 
 header{
@@ -32,17 +34,18 @@ header{
 
 h1{
 	padding: .75rem;
+	text-align: center;
 }
 
 #toast-wrap{
 	position: fixed;
-	background: var(--text);
+	background: var(--theme);
 	top: .5rem;
 	right: -20rem;
 	margin: auto;
 	padding: 1rem;
 	border-radius: .5rem;
-	box-shadow: 0 0 2px 2px #9999
+	box-shadow: 0 0 2px 2px #9999;
 }
 
 #media-type{
@@ -130,7 +133,7 @@ audio{
 	justify-content: center;
 	align-items: center;
 	border-radius: 50%;
-	color: var(--bg);
+	color: #FEF;
 	background: transparent;
 }
 
@@ -139,7 +142,7 @@ button#audiobtn{
 }
 
 #user-controls button:disabled{
-	color: #CCC;
+	color: #999;
 }
 
 #optbtn, #loopbtn{
@@ -154,13 +157,13 @@ button#audiobtn{
 #seek{
 	appearance: none;
 	display: block;
-	background: var(--bg);
+	background: #FEF;
 	height: .3rem;
 	width: 100%;
 }
 
 #seek:disabled{
-	background: #CCC;
+	background: #999;
 }
 
 #audio_duration{
@@ -192,7 +195,7 @@ button#audiobtn{
 	bottom: 0;
 	width: 100%;
 	margin: auto;
-	background: var(--text);
+	background: var(--theme);
 	border-radius: 1rem;
 }
 
@@ -218,20 +221,20 @@ button#audiobtn{
 	float: right;
 }
 
-.active{
-	background: var(--text);
-	color: var(--bg);
-	border: 1px dashed;
-}
-
-.inactive{
-	background: var(--bg);
-	color: var(--text);
-	border: 0;
-}
-
-#video_element{
-	border: 1px solid;
+#icon{
+	width: 90%;
+	margin: auto;
 	padding: 1rem;
-	display: none
+	height: 30rem;
+	align-items: center;
+	display: flex;
+	justify-content: center;
+}
+
+#icon div{
+	font-size: 10rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 1rem;
 }
